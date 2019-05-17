@@ -13,9 +13,7 @@ class Smurfs extends React.Component{
 
     addSmurf = e =>{
         e.preventDefault();
-        {this.state.name && 
-            this.state.height && 
-            this.state.age && 
+        if(this.state.name && this.state.height && this.state.age){
             setTimeout(this.props.addSmurf(this.state),1500)
         }
         this.setState({
@@ -43,8 +41,11 @@ class Smurfs extends React.Component{
                         <input onChange={this.onChange} name="name" type="text" value={this.state.name} placeholder="New Smurf:"/>
                         <input onChange={this.onChange} name="age" type="number" value={this.state.age} placeholder="age:"/>
                         <input onChange={this.onChange} name="height" type="text" value={this.state.height} placeholder="height:"/>
-                        {this.props.addingSmurf && <button>	<Loader type="ThreeDots" color="#somecolor" height={80} width={80} /></button>}
-                        {!this.props.addingSmurf && <button type="submit">+</button>}
+                        <div className="action-tray">
+                       
+                            {this.props.addingSmurf && <button >	<Loader type="ThreeDots" color="#somecolor" height={80} width={80} /></button>}
+                            {!this.props.addingSmurf && <button className="fas fa-plus-circle" type="submit"></button>}
+                        </div>
                     </div>
                 </form>
             </div>
@@ -53,7 +54,6 @@ class Smurfs extends React.Component{
 }
 
 const mapStateToProps = state =>{
-    console.log(state)
     return {
         smurfs:state.smurfs,
         addingSmurf:state.addingSmurf

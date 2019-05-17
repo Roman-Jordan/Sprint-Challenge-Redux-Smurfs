@@ -17,7 +17,7 @@ const Smurf = props =>{
             </div>
             <div className="action-tray">
                 <i data-id={props.smurf.id} onClick={deleteSmurf} className="fas fa-trash"></i>
-                <i className="fas fa-pencil"></i>
+                <i className="fas fa-pencil-alt"></i>
             </div>
         </div>
     )

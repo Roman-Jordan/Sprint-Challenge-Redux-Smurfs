@@ -72,7 +72,6 @@ img{
   display:flex;
   flex-direction: column;
   max-width:80%;
-  position: relative;
 }
 
 .smurf-title input{
@@ -92,42 +91,28 @@ img{
   font-size:2rem;
 }
 
-.smurf-title button{
-  position:absolute;
-  top:0;
-  right:0;
-  margin:auto;
-  padding:.1rem;
-  font-size:1rem;
-  border-radius: 50%;
-  border:none;
-  color:#027dfe;
-  background:#fff;
-}
-
-.smurf-title button:hover{
-  color:#fff;
-  background:#027dfe;
-}
 
 .smurf{
   position:relative;
 }
-.action-tray .fa-trash{
+.action-tray .fa-trash,.fa-plus-circle,.fa-pencil-alt{
   font-size:1rem;
-  background:#fff;
+  background:transparent;
+  border:none;
   border-radius: 50%;
   padding:.3rem;
+  color:#027dfe;
 }
 
-.action-tray .fa-trash:hover{
-  background:#000;
+.action-tray .fa-trash:hover,.fa-plus-circle:hover,.fa-pencil-alt:hover{
+  background:#fff;
 }
 .smurf .action-tray{
   position: absolute;
-  top:.5rem;
-  right:.5rem;
+  top:0;
+  right:0;
   display:flex;
+  background:rgba(0,0,0,.8);
 }
 input::placeholder{
   color:#027dfe;
@@ -141,9 +126,9 @@ input::placeholder{
 }
 
 .Smurf-Tray .smurf img{
-  max-width:20%;
+  max-width:25%;
   height:100%;
-  border-radius: 1rem;
+
 }
 
 
