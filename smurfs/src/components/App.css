@@ -26,6 +26,10 @@ p,a,span{
   box-sizing:border-box;
 }
 
+img{
+  width:100%;
+  height:auto;
+}
 .loader{
   margin: auto;
   display:flex;
@@ -47,6 +51,82 @@ p,a,span{
 .load-text h2{
   margin-right:5px;
 }
+
+.Smurf-Tray{
+  width:90%;
+  max-width:100rem;
+  margin:auto;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.Smurf-Tray .smurf{
+  max-width:20rem;
+  padding:1rem;
+  display:flex;
+  background:rgba(255,255,255,.3);
+  margin:2rem
+}
+
+.smurf .smurf-title{
+  display:flex;
+  flex-direction: column;
+  max-width:80%;
+  position: relative;
+}
+
+.smurf-title input{
+  max-width: 100%;
+  background:transparent;
+  margin: 0 0 0 1rem;
+  padding:0;
+  border:none;
+  font-family: 'Stylish', sans-serif;
+  font-size:1.8rem;
+  color:#027dfe;
+  text-shadow: 1px 1px #fff;
+}
+
+.smurf-title input:first-child{
+  font-size:2rem;
+}
+
+.smurf-title button{
+  position:absolute;
+  top:0;
+  right:0;
+  margin:auto;
+  padding:.1rem;
+  font-size:1rem;
+  border-radius: 50%;
+  border:none;
+  color:#027dfe;
+  background:#fff;
+}
+
+.smurf-title button:hover{
+  color:#fff;
+  background:#027dfe;
+}
+
+
+
+input::placeholder{
+  color:#027dfe;
+  text-shadow: 1px 1px #fff;
+}
+
+.Smurf-Tray h3,p{
+  padding:0;
+  margin:0 0 0 1rem;
+}
+
+.Smurf-Tray .smurf img{
+  max-width:20%;
+  height:100%;
+  border-radius: 1rem;
+}
+
 
 .load-text svg{
   padding-top:20px

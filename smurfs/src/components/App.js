@@ -8,8 +8,9 @@ import Smurfs from './Smurfs';
 
 
 class App extends Component {
+  
   componentDidMount(){
-    setTimeout(this.props.getSmurfs, 5000);
+    setTimeout(this.props.getSmurfs, 3000);
   }
 
   render() {
