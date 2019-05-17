@@ -1,6 +1,6 @@
 
 import {
-    START_SMURFING,
+    SMURF_DELETED,
     FETCHING_SMURFS,
     SMURF_ADDED, 
     FETCH_SUCCESS,
@@ -20,6 +20,12 @@ const rootReducer = (state = initialState, action) =>{
    switch(action.type){
 
     case SMURF_ADDED:{
+      return {
+        smurfs:action.payload
+      }
+    }
+
+    case SMURF_DELETED:{
       return {
         smurfs:action.payload
       }

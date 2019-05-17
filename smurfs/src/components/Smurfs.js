@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Smurf from './Smurf'
 import Loader from 'react-loader-spinner';
-import {addSmurf} from '../actions'
+import {addSmurf, deleteSmurf} from '../actions'
 
 class Smurfs extends React.Component{
     state={
@@ -13,7 +13,11 @@ class Smurfs extends React.Component{
 
     addSmurf = e =>{
         e.preventDefault();
-        this.props.addSmurf(this.state);
+        {this.state.name && 
+            this.state.height && 
+            this.state.age && 
+            setTimeout(this.props.addSmurf(this.state),1500)
+        }
         this.setState({
             name:'',
             height:'',
@@ -23,6 +27,7 @@ class Smurfs extends React.Component{
 
     onChange = e =>{
         e.preventDefault();
+        
         this.setState({
             [e.target.name]:e.target.value
         })
@@ -31,7 +36,7 @@ class Smurfs extends React.Component{
     render(){
         return(
             <div className="Smurf-Tray">
-                {this.props.smurfs.map(smurf =><Smurf key={smurf.id} smurf={smurf}/>)}
+                {this.props.smurfs.map(smurf =><Smurf key={smurf.id} deleteSmurf={this.props.deleteSmurf} smurf={smurf}/>)}
                 <form name="addSmurf" className="smurf" onSubmit={this.addSmurf}>
                     <img alt="smurf outline" src="https://sites.google.com/site/smurfcompany/_/rsrc/1354029033371/Home/Screen%20Shot%202555-11-27%20at%2010.09.46%20PM.png?height=320&width=272" />
                     <div className="smurf-title" >
@@ -55,4 +60,4 @@ const mapStateToProps = state =>{
     }
 }
 
-export default connect(mapStateToProps,{addSmurf})(Smurfs);
+export default connect(mapStateToProps,{addSmurf,deleteSmurf})(Smurfs);
