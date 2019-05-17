@@ -8,14 +8,14 @@ from '../actions'
  
  const initialState = {
    smurfs: [],
-   fetchingSmurfs: false,
+   fetchingSmurfs: true,
    addingSmurf: false,
    updatingSmurf: false,
    deletingSmurf: false,
    error: null
  }
 
- const reducer = (state = initialState, action) =>{
+const rootReducer = (state = initialState, action) =>{
    switch(action.type){
 
     case START_SMURFING:{
@@ -42,5 +42,10 @@ from '../actions'
         error:action.payload
       }
     }
+
+    default:
+      return state
    }
  }
+
+ export default rootReducer;

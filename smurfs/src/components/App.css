@@ -1,28 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
+
+html{
+  font-size:62.5%;
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+html,body{
+  font-size:1.8rem;
+  margin:0;
+  color:#027dfe;
+  text-shadow: 1px 1px #fff;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1,h2,h3{
+  font-size:2rem;
+  font-family: 'Stylish', sans-serif;
 }
 
-.App-title {
-  font-size: 1.5em;
+p,a,span{
+  font-size:1.8rem;
+  font-family: 'Stylish', sans-serif;
 }
 
-.App-intro {
-  font-size: large;
+*{
+  box-sizing:border-box;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.loader{
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  align-content:center;
+}
+
+.loader svg{
+  margin-top:5rem;
+}
+
+.load-text{
+  display:flex;
+  align-items: center;
+}
+
+.load-text h2{
+  margin-right:5px;
+}
+
+.load-text svg{
+  padding-top:20px
+}
+
+.Smurf-Village{
+  height:100vh;
+  width:100%;
+  background:url(http://bcheights.com/wp-content/uploads/2017/04/smurfs-online.jpg);
+  background-size:cover;
+  padding:2rem;
+}
+
+.Smurf-Village h1{
+  border-radius: .5rem;
+  text-align:center;
 }

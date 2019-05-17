@@ -14,9 +14,9 @@ export const addSmurf = smurf => dispatch =>{
 
 export const getSmurfs = smurf => dispatch =>{
   axios
-    .get('http://localhost:3333')
-    .then(res =>console.log(res.data))
-    .catch(err=>console.log(err))
+    .get('http://localhost:3333/smurfs')
+    .then(res =>dispatch({type:FETCH_SUCCESS, payload:res.data}))
+    .catch(err=>dispatch({type:FETCH_ERROR,payload:err}))
 }
 
 export const updateSmurf = smurf => dispatch =>{
